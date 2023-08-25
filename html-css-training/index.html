@@ -280,26 +280,103 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const addToCartButtons = document.querySelectorAll(".lsale, .msale");
-
-        addToCartButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            button.disabled = true;
-            button.textContent = "Adding";
-
-            setTimeout(() => {
-              button.textContent = "Thank you!";
-              setTimeout(() => {
-                button.disabled = false;
-                button.textContent = "Add To Cart";
-              }, 3000);
-            }, 2000);
-          });
-        });
-      });
-    </script>
+    <div class="doubly-float">
+      <select class="currency-switcher right" name="doubly-currencies">
+        <option
+          value="USD"
+          data-country="United-States"
+          data-currency-symbol="$"
+          data-display="USD"
+        >
+          US Dollar
+        </option>
+        <option
+          value="EUR"
+          data-country="European-Union"
+          data-currency-symbol="€"
+          data-display="EUR"
+        >
+          Euro
+        </option>
+        <option
+          value="GBP"
+          data-country="United-Kingdom"
+          data-currency-symbol="£"
+          data-display="GBP"
+        >
+          British Pound Sterling
+        </option>
+        <option
+          value="CAD"
+          data-country="Canada"
+          data-currency-symbol="$"
+          data-display="CAD"
+        >
+          Canadian Dollar
+        </option>
+        <option
+          value="AUD"
+          data-country="Australia"
+          data-currency-symbol="$"
+          data-display="AUD"
+        >
+          Australian Dollar
+        </option>
+      </select>
+      <div class="doubly-nice-select currency-switcher right" data-nosnippet="">
+        <span class="current notranslate"
+          ><span class="flags flags-Canada"></span> &nbsp;CAD</span
+        >
+        <ul class="list">
+          <li
+            class="option notranslate"
+            data-value="USD"
+            data-country="United-States"
+            data-currency-symbol="$"
+            data-display="USD"
+          >
+            <span class="flags flags-United-States"></span> &nbsp;US Dollar
+          </li>
+          <li
+            class="option notranslate"
+            data-value="EUR"
+            data-country="European-Union"
+            data-currency-symbol="€"
+            data-display="EUR"
+          >
+            <span class="flags flags-European-Union"></span> &nbsp;Euro
+          </li>
+          <li
+            class="option notranslate"
+            data-value="GBP"
+            data-country="United-Kingdom"
+            data-currency-symbol="£"
+            data-display="GBP"
+          >
+            <span class="flags flags-United-Kingdom"></span> &nbsp;British Pound
+            Sterling
+          </li>
+          <li
+            class="option notranslate selected focus"
+            data-value="CAD"
+            data-country="Canada"
+            data-currency-symbol="$"
+            data-display="CAD"
+          >
+            <span class="flags flags-Canada"></span> &nbsp;Canadian Dollar
+          </li>
+          <li
+            class="option notranslate"
+            data-value="AUD"
+            data-country="Australia"
+            data-currency-symbol="$"
+            data-display="AUD"
+          >
+            <span class="flags flags-Australia"></span> &nbsp;Australian Dollar
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

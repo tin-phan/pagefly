@@ -246,3 +246,398 @@ a {
   font-size: 13px;
   line-height: 1.5em;
 }
+
+.layered-currency-switcher {
+  width: auto;
+  float: right;
+  padding: 0 0 0 50px;
+  margin: 0px;
+}
+.layered-currency-switcher li {
+  display: block;
+  float: left;
+  font-size: 15px;
+  margin: 0px;
+}
+.layered-currency-switcher li button.currency-switcher-btn {
+  width: auto;
+  height: auto;
+  margin-bottom: 0px;
+  background: #fff;
+  font-family: Arial !important;
+  line-height: 18px;
+  border: 1px solid #dadada;
+  border-radius: 25px;
+  color: #9a9a9a;
+  float: left;
+  font-weight: 700;
+  margin-left: -46px;
+  min-width: 90px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 11px 10px 49px;
+}
+.price-on-hover,
+.price-on-hover-wrapper {
+  font-size: 15px !important;
+  line-height: 25px !important;
+}
+.layered-currency-switcher li button.currency-switcher-btn:focus {
+  outline: 0;
+  -webkit-outline: none;
+  -moz-outline: none;
+  -o-outline: none;
+}
+.layered-currency-switcher li button.currency-switcher-btn:hover {
+  background: #ddf6cf;
+  border-color: #a9d092;
+  color: #89b171;
+}
+.layered-currency-switcher li button.currency-switcher-btn span {
+  display: none;
+}
+.layered-currency-switcher li button.currency-switcher-btn:first-child {
+  border-radius: 25px;
+}
+.layered-currency-switcher li button.currency-switcher-btn.selected {
+  background: #de4c39;
+  border-color: #de4c39;
+  color: #fff;
+  z-index: 99;
+  padding-left: 23px !important;
+  padding-right: 23px !important;
+}
+.layered-currency-switcher li button.currency-switcher-btn.selected span {
+  display: inline-block;
+}
+.doubly,
+.money {
+  position: relative;
+  font-weight: inherit !important;
+  font-size: inherit !important;
+  text-decoration: inherit !important;
+}
+.price-on-hover-wrapper {
+  position: absolute;
+  left: -50%;
+  text-align: center;
+  width: 200%;
+  top: 110%;
+  z-index: 100000000;
+}
+.price-on-hover {
+  background: #333;
+  border-color: #fff !important;
+  padding: 2px 5px 3px;
+  font-weight: 400;
+  border-radius: 5px;
+  font-family: Helvetica Neue, Arial;
+  color: #fff;
+  border: 0;
+}
+.price-on-hover:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -4px;
+  margin-top: -2px;
+  width: 0;
+  height: 0;
+  border-bottom: solid 4px #333;
+  border-left: solid 4px transparent;
+  border-right: solid 4px transparent;
+}
+.doubly-message {
+  margin: 5px 0;
+}
+.doubly-wrapper {
+  float: right;
+}
+.doubly-float {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  right: auto;
+  z-index: 100000;
+}
+select.currency-switcher {
+  margin: 0px;
+  position: relative;
+  top: auto;
+}
+select.currency-switcher {
+  display: none;
+}
+.doubly-nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: "Helvetica Neue", Arial;
+  font-size: 14px;
+  font-weight: 400;
+  height: 42px;
+  line-height: 40px;
+  outline: 0;
+  padding-left: 12px;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  transition: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+}
+.doubly-nice-select:hover {
+  border-color: #dbdbdb;
+}
+.doubly-nice-select.open,
+.doubly-nice-select:active,
+.doubly-nice-select:focus {
+  border-color: #88bfff;
+}
+.doubly-nice-select:after {
+  border-bottom: 2px solid #999;
+  border-right: 2px solid #999;
+  content: "";
+  display: block;
+  height: 5px;
+  box-sizing: content-box;
+  pointer-events: none;
+  position: absolute;
+  right: 14px;
+  top: 16px;
+  -webkit-transform-origin: 66% 66%;
+  transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: transform 0.15s ease-in-out;
+  width: 5px;
+}
+.doubly-nice-select.open:after {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.doubly-nice-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+  z-index: 1000000 !important;
+}
+.doubly-nice-select.disabled {
+  border-color: #ededed;
+  color: #999;
+  pointer-events: none;
+}
+.doubly-nice-select.disabled:after {
+  border-color: #ccc;
+}
+.doubly-nice-select.wide {
+  width: 100%;
+}
+.doubly-nice-select.wide .list {
+  left: 0 !important;
+  right: 0 !important;
+}
+.doubly-nice-select.right {
+  float: right;
+}
+.doubly-nice-select.right .list {
+  left: auto;
+  right: 0;
+}
+.doubly-nice-select.small {
+  font-size: 12px;
+  height: 36px;
+  line-height: 34px;
+}
+.doubly-nice-select.small:after {
+  height: 4px;
+  width: 4px;
+}
+
+.flags-Australia,
+.flags-Canada,
+.flags-European-Union,
+.flags-United-Kingdom,
+.flags-United-States {
+  width: 30px;
+  height: 20px;
+}
+.doubly-nice-select.small .option {
+  line-height: 34px;
+  min-height: 34px;
+}
+.doubly-nice-select .list {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  box-sizing: border-box;
+  margin: 4px 0 0 !important;
+  opacity: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  max-height: 260px;
+  left: 0;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(-21px);
+  transform: scale(0.75) translateY(-21px);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 100000;
+}
+.doubly-nice-select .current img,
+.doubly-nice-select .option img {
+  vertical-align: top;
+  padding-top: 10px;
+}
+.doubly-nice-select .list:hover .option:not(:hover) {
+  background-color: transparent !important;
+}
+.doubly-nice-select .option {
+  font-size: 13px !important;
+  float: none !important;
+  text-align: left !important;
+  margin: 0px !important;
+  font-family: Helvetica Neue, Arial !important;
+  letter-spacing: normal;
+  text-transform: none;
+  display: block !important;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px !important;
+  list-style: none;
+  min-height: 40px;
+  min-width: 55px;
+  margin-bottom: 0;
+  outline: 0;
+  padding-left: 18px !important;
+  padding-right: 52px !important;
+  text-align: left;
+  transition: all 0.2s;
+}
+.doubly-nice-select .option.focus,
+.doubly-nice-select .option.selected.focus,
+.doubly-nice-select .option:hover {
+  background-color: #f6f6f6;
+}
+.doubly-nice-select .option.selected {
+  font-weight: 700;
+}
+.doubly-nice-select .current img {
+  line-height: 45px;
+}
+.doubly-nice-select.slim {
+  padding: 0 18px 0 0;
+  height: 20px;
+  line-height: 20px;
+  border: 0;
+  background: 0 0 !important;
+}
+.doubly-nice-select.slim .current .flags {
+  margin-top: 0 !important;
+}
+.doubly-nice-select.slim:after {
+  right: 4px;
+  top: 6px;
+}
+.flags {
+  background-image: url(https://cdn.shopify.com/s/files/1/2170/1117/t/8/assets/currency-flags.png?v=1687158924);
+  background-repeat: no-repeat;
+  display: block;
+  margin: 10px 4px 0 0 !important;
+  float: left;
+}
+
+.flags-United-States {
+  background-position: -365px -5px;
+}
+.flags-United-Kingdom {
+  background-position: -405px -5px;
+}
+.flags-Canada {
+  background-position: -365px -395px;
+}
+.flags-Australia {
+  background-position: -285px -455px;
+}
+.flags-European-Union {
+  background-position: -165px -485px;
+}
+.flags-small {
+  background-image: url(https://cdn.shopify.com/s/files/1/2170/1117/t/8/assets/currency-flags-small.png?v=1687158926);
+  background-repeat: no-repeat;
+  display: block;
+  margin: 5px 3px 0 0 !important;
+  border: 1px solid #fff;
+  box-sizing: content-box;
+  float: left;
+}
+.doubly-nice-select.open .list .flags-small {
+  margin-top: 15px !important;
+}
+
+.flags-small.flags-United-Kingdom {
+  width: 15px;
+  height: 10px;
+  background-position: -150px 0;
+}
+
+.flags-small.flags-Canada {
+  width: 15px;
+  height: 10px;
+  background-position: -135px -130px;
+}
+.flags-small.flags-Australia {
+  width: 15px;
+  height: 10px;
+  background-position: -105px -150px;
+}
+.flags-small.flags-European-Union {
+  width: 15px;
+  height: 10px;
+  background-position: -60px -160px;
+}
+.flags-small.flags-United-States {
+  width: 15px;
+  height: 9px;
+  background-position: -75px -160px;
+}
+.doubly-float .doubly-nice-select .list {
+  top: -210px;
+  left: 0;
+  right: auto;
+}
+.doubly-nice-select,
+.doubly-nice-select .list {
+  background: #ffffff;
+}
+.doubly-nice-select .current,
+.doubly-nice-select .list .option {
+  color: #403f3f;
+}
+.doubly-nice-select .option:hover,
+.doubly-nice-select .option.focus,
+.doubly-nice-select .option.selected.focus {
+  background-color: #f6f6f6;
+}
+.price-on-hover {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}
+.price-on-hover:after {
+  border-bottom-color: #333333 !important;
+}
